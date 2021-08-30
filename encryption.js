@@ -66,4 +66,4 @@
        return output.join(" ");
     }
 
-    // console.log(encryption("feedthedog"))
+    // console.log(encryption("iamteo"));
