@@ -65,5 +65,20 @@
         
        return output.join(" ");
     }
-
-    // console.log(encryption("iamteo"));
+    function decrypt(message){
+        //get the grind 
+        let messageArr = message.split(" "); 
+        let decrypted = []; 
+        let rowCount = messageArr.length, colCount = messageArr[0].length; 
+        for(let col = 0; col < colCount; col++){
+            for(let row = 0; row < rowCount; row++){
+                let char = messageArr[row][col];
+                if(char !== undefined){decrypted.push(char)};
+            }
+        }
+        return decrypted.join(" "); 
+    }
+    let encrypted = encryption("Isitworking");
+    console.log(encrypted); 
+    let decrypted = decrypt(encrypted);
+    console.log(decrypted);
